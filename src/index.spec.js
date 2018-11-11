@@ -1,5 +1,8 @@
+const service = require('./index');
+
 describe('Service - feature toggle', () => {
   it('should initialize cache', async () => {
-    expect(1).toBe(1);
+    const val = service.get('validity_period');
+    expect(val).toEqual({});
   });
 });
