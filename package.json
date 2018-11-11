@@ -1,0 +1,46 @@
+{
+  "name": "@astro-my/featuretoggle",
+  "version": "1.0.0",
+  "description": "Retrieve feature flags status for services or portal",
+  "main": "lib/index.js",
+  "scripts": {
+    "clean": "rimraf lib",
+    "test": "jest src -- --coverage",
+    "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
+    "lint": "eslint src",
+    "lint:fix": "yarn lint -- --fix",
+    "prepublish": "yarn clean && yarn lint && yarn test && yarn build"
+  },
+  "files": [
+    "lib",
+    "src"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jinified/featureToggle.git"
+  },
+  "keywords": [
+    "elasticache",
+    "dynamodb",
+    "aws"
+  ],
+  "author": "Jin",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jinified/featureToggle/issues"
+  },
+  "homepage": "https://github.com/jinified/featureToggle#readme",
+  "dependencies": {
+    "@astro-my/cache": "^1.0.5"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-minify": "^0.5.0",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.9.0",
+    "eslint-config-astro": "^1.0.7",
+    "eslint-plugin-import": "^2.14.0",
+    "jest": "^23.6.0"
+  }
+}
