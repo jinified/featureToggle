@@ -4,13 +4,11 @@
 const axios = require('axios');
 const config = require('../../config');
 
-const getRecord = async (featureId) => {
-    return axios.get(`${config.API_ENDPOINT}/get`, {
-        params: {
-            featureId
-        }
-    }).then(res => res.response.flag).catch(err => handleError(err));
-}
+const getRecord = async featureId => axios.get(`${config.API_ENDPOINT}/get`, {
+  params: {
+    featureId
+  }
+}).then(res => res.response.flag).catch(err => handleError(err));
 
 
 const handleError = (error) => {
