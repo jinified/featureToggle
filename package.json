@@ -1,6 +1,6 @@
 {
   "name": "@astro-my/featuretoggle",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Retrieve feature flags status for services or portal",
   "main": "src/index.js",
   "scripts": {
