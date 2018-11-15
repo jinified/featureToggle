@@ -5,11 +5,12 @@
   "main": "lib/index.js",
   "scripts": {
     "clean": "rimraf lib",
-    "test": "jest src -- --coverage",
+    "test": "jest --coverage src",
+    "test:watch": "jest --coverage --watch src",
     "build": "cross-env BABEL_ENV=production babel src --out-dir lib",
     "lint": "eslint src",
     "lint:fix": "yarn lint -- --fix",
-    "prepublish": "yarn clean && yarn lint && yarn test && yarn build"
+    "prepublish": "yarn clean && yarn lint && yarn build"
   },
   "files": [
     "lib",
@@ -31,7 +32,8 @@
   },
   "homepage": "https://github.com/jinified/featureToggle#readme",
   "dependencies": {
-    "@astro-my/cache": "^1.0.5"
+    "@astro-my/cache": "^1.0.5",
+    "axios": "^0.18.0"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
@@ -41,6 +43,7 @@
     "eslint": "^5.9.0",
     "eslint-config-astro": "^1.0.7",
     "eslint-plugin-import": "^2.14.0",
-    "jest": "^23.6.0"
+    "jest": "^23.6.0",
+    "rewire": "^4.0.1"
   }
 }
