@@ -7,7 +7,7 @@ jest.mock('@astro-my/cache');
 describe('Service - feature toggle', () => {
   it('should return correct value if key is found in cache', async () => {
 
-    let key = "validity_period"
+    let key = "identity-feature-validity_period"
     let val = true
 
     cache.get.mockImplementation((featureId) => {

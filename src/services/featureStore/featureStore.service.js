@@ -4,7 +4,7 @@
 const axios = require('axios');
 const config = require('../../config');
 
-const getRecord = (featureId) => {
+const getRecord = async (featureId) => {
     return axios.get(`${config.API_ENDPOINT}/get`, {
         params: {
             featureId
