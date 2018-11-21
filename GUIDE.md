@@ -17,3 +17,5 @@
 ### [Using Jest Snapshot to do API test](https://medium.com/@ericwooley/rock-solid-endpoints-using-jest-snapshot-testing-for-api-integration-tests-41bf72f96c46)
 
 - need to have a simple migration and schema for testing
+
+### [Test NPM package without publishing](https://medium.com/@the1mills/how-to-test-your-npm-module-without-publishing-it-every-5-minutes-1c4cb4b369be)
