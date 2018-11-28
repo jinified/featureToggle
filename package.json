@@ -32,7 +32,6 @@
   },
   "homepage": "https://github.com/jinified/featureToggle#readme",
   "dependencies": {
-    "@astro-my/cache": "^1.0.5",
     "axios": "^0.18.0"
   },
   "devDependencies": {
