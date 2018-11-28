@@ -1,4 +1,3 @@
-const cache = require('@astro-my/cache');
 const service = require('./index');
 const featureStore = require('./services/featureStore');
 
