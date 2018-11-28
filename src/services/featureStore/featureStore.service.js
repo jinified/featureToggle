@@ -5,14 +5,12 @@ const axios = require('axios');
 const config = require('../../config');
 
 const getRecord = async id => axios.get(`${config.API_ENDPOINT}/get`, {
-    params: {
-        featureId: id
-    }
+  params: {
+    featureId: id
+  }
 })
-.then(res => {
-    return res.data.response
-})
-.catch(err => handleError(err));
+  .then(res => res.data.response)
+  .catch(err => handleError(err));
 
 
 const handleError = (error) => {
