@@ -1,5 +1,6 @@
 const cache = require('@astro-my/cache');
 const featureStore = require('./services/featureStore');
+const config = require('./config')
 
 const SERVICE_NAME = 'identity-feature';
 
@@ -12,11 +13,11 @@ const get = async (featureId) => {
   const key = `${SERVICE_NAME}-${featureId}`;
   try {
     const val = await cache.get(key);
-    if (val === null) {
+    if (val === null || val === undefined) {
       const received = await featureStore.getRecord(featureId);
-
       // Stores result in cache
       cache.put(key, received);
+      return received
     }
     return val;
   } catch (err) {
