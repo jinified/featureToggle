@@ -8,7 +8,7 @@ The SDK will make an API call to the service which will retrieve the information
 
 ## Getting Started
 
-1. Calling the `get` method with featureId (which can be found on the feature store in admin portal) will return information for the particular flag
+Calling the `get` method with featureId (which can be found on the feature store in admin portal) will return information for the particular flag
 
 ```javascript
 const ICode = require('@astro-my/idc-code')
@@ -29,6 +29,8 @@ exports.get = async (req, res, next) => {
   }
 }
 ```
+
+`get` accepts a single featureId or an array of featureId as input. An array of matching feature flags will be return in the case of passing in array as input
 
 ## Features
 

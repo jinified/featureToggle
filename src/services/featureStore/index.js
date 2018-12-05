@@ -1,5 +1,5 @@
-const { getRecord } = require('./featureStore.service');
+const { getRecord, getRecords } = require('./featureStore.service');
 
 module.exports = {
-  getRecord
+  getRecord, getRecords
 };

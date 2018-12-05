@@ -4,6 +4,20 @@
 const axios = require('axios');
 const config = require('../../config');
 
+/**
+ * Get list of feature flags
+*/
+const getRecords = async id => axios.get(`${config.API_ENDPOINT}/batchget`, {
+  params: {
+    featureId: id
+  }
+})
+  .then(res => res.data.response)
+  .catch((err) => {
+    handleError(err);
+  });
+
+
 const getRecord = async id => axios.get(`${config.API_ENDPOINT}/get`, {
   params: {
     featureId: id
@@ -37,5 +51,6 @@ const handleError = (error) => {
 };
 
 module.exports = {
-  getRecord
+  getRecord,
+  getRecords
 };
