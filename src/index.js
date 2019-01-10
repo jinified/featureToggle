@@ -6,15 +6,12 @@ const featureStore = require('./services/featureStore');
  *
 */
 const get = async (featureId) => {
-  console.log(featureId);
-  console.log(Array.isArray(featureId));
   try {
     const received = Array.isArray(featureId)
       ? await featureStore.getRecords(featureId)
       : await featureStore.getRecord(featureId);
     return received;
   } catch (err) {
-    console.log(err);
     return undefined;
   }
 };
